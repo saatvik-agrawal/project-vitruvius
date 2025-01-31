@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop Selector</title>
+    <title>Participatory Design Toolkit</title>
     <style>
-        /* Basic styles for layout and design */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -17,7 +16,7 @@
             color: #333;
         }
         .container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             background: white;
             padding: 20px;
@@ -37,57 +36,77 @@
             border-left: 5px solid #2196F3;
             display: none;
         }
+        .workshop-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .workshop-box {
+            width: 30%;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Select a Workshop</h1>
-        <p>Choose your requirement and find the best workshop for you.</p>
+        <h1>Welcome to the Participatory Design Toolkit!</h1>
+        <p>Please input your desired level of engagement and scale of participation, and we will recommend the best workshop designs for you!</p>
         
-        <!-- Dropdown selection for choosing a workshop requirement -->
-        <select id="workshopInput">
-            <option value="">-- Select a Requirement --</option>
-            <option value="community">Community Engagement</option>
-            <option value="discussion">Structured Discussion (Fishbowl)</option>
-            <option value="visual">Graphical Visualization</option>
-            <option value="modelling">Hands-on Modeling</option>
-            <option value="photography">Photography-based Research</option>
-            <option value="mapping">Mapping Community Spaces</option>
-            <option value="survey">Survey and Feedback</option>
-            <option value="design">Collaborative Design</option>
+        <label for="engagement">Level of Engagement:</label>
+        <select id="engagement">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
         </select>
         
-        <!-- Button to trigger workshop selection -->
-        <button onclick="findWorkshop()">Find Workshop</button>
+        <label for="participation">Scale of Participation:</label>
+        <select id="participation">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
         
-        <!-- Display area for the recommended workshop -->
-        <div id="result"></div>
+        <button onclick="findWorkshops()">Find Workshops</button>
+        
+        <div id="result">
+            <h2>Based on your inputs, the best 3 workshop designs for you are:</h2>
+            <div class="workshop-container">
+                <div class="workshop-box" id="workshop1"></div>
+                <div class="workshop-box" id="workshop2"></div>
+                <div class="workshop-box" id="workshop3"></div>
+            </div>
+        </div>
     </div>
     
     <script>
-        function findWorkshop() {
-            var input = document.getElementById("workshopInput").value; // Get selected requirement
-            var result = document.getElementById("result"); // Get result display area
+        function findWorkshops() {
+            var engagement = document.getElementById("engagement").value;
+            var participation = document.getElementById("participation").value;
+            var result = document.getElementById("result");
             
-            // Object storing workshop recommendations based on selected input
-            var workshops = {
-                "community": "Community Engagement with Engineers: Learn how engineers can engage with local communities beyond technology.",
-                "discussion": "Fishbowl Method: A structured discussion method for debating different perspectives.",
-                "visual": "Graph Visualization: Represent community preferences using visual charts.",
-                "modelling": "Modeling Workshop: Use creative materials to design community solutions.",
-                "photography": "A Week with a Camera: Participants document their surroundings to discuss neighborhood improvements.",
-                "mapping": "Mapping Activity: Identify valued and problematic spaces in a community.",
-                "survey": "Visual Preference Survey: Collect insights about preferred public spaces.",
-                "design": "Collaborative Design Patterns: Explore real-world design problems using case studies."
+            var workshopRecommendations = {
+                "low-small": ["Focus Group", "World Café", "Mind Mapping"],
+                "low-medium": ["Visual Preference Survey", "Fishbowl Method", "Mapping Activity"],
+                "low-large": ["SpeakOut Passport", "Neighborhood Drawings", "A Week with a Camera"],
+                "medium-small": ["Graph Visualization", "Issues/Opportunities Table", "Video Diary Exercise"],
+                "medium-medium": ["Collaborative Design Patterns", "Design Scenarios", "Sandbox Modeling"],
+                "medium-large": ["World Café", "Participatory Design for Housing", "Open Space Technology"],
+                "high-small": ["Modeling Workshop", "Picturization Exercise", "Mapping Activity"],
+                "high-medium": ["Community Engagement with Engineers", "Density Block Modeling", "SpeakOut Passport"],
+                "high-large": ["World Café", "Participatory Design for Housing", "Open Space Technology"]
             };
             
-            // Check if the selected input matches a workshop
-            if (input in workshops) {
-                result.innerHTML = "<strong>Recommended Workshop:</strong> " + workshops[input];
-                result.style.display = "block"; // Show the result area
-            } else {
-                result.style.display = "none"; // Hide the result area if no selection
-            }
+            var key = engagement + "-" + participation;
+            var selectedWorkshops = workshopRecommendations[key] || ["Workshop Not Found", "Workshop Not Found", "Workshop Not Found"];
+            
+            document.getElementById("workshop1").innerText = selectedWorkshops[0];
+            document.getElementById("workshop2").innerText = selectedWorkshops[1];
+            document.getElementById("workshop3").innerText = selectedWorkshops[2];
+            
+            result.style.display = "block";
         }
     </script>
 </body>
