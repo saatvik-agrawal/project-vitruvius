@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Workshop Selector&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Basic styles for layout and design */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f4f4f4;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 600px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0px 0px 10px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>select, button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#result {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e3f2fd;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid #2196F3;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Select a Workshop&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Choose your requirement and find the best workshop for you.&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Dropdown selection for choosing a workshop requirement --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="workshopInput"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value=""&gt;-- Select a Requirement --&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="community"&gt;Community Engagement&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="discussion"&gt;Structured Discussion (Fishbowl)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="visual"&gt;Graphical Visualization&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="modelling"&gt;Hands-on Modeling&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="photography"&gt;Photography-based Research&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="mapping"&gt;Mapping Community Spaces&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="survey"&gt;Survey and Feedback&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="design"&gt;Collaborative Design&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Button to trigger workshop selection --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="findWorkshop()"&gt;Find Workshop&lt;/button&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Display area for the recommended workshop --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="result"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function findWorkshop() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var input = document.getElementById("workshopInput").value; // Get selected requirement</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var result = document.getElementById("result"); // Get result display area</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Object storing workshop recommendations based on selected input</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var workshops = {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"community": "Community Engagement with Engineers: Learn how engineers can engage with local communities beyond technology.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"discussion": "Fishbowl Method: A structured discussion method for debating different perspectives.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"visual": "Graph Visualization: Represent community preferences using visual charts.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"modelling": "Modeling Workshop: Use creative materials to design community solutions.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"photography": "A Week with a Camera: Participants document their surroundings to discuss neighborhood improvements.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"mapping": "Mapping Activity: Identify valued and problematic spaces in a community.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"survey": "Visual Preference Survey: Collect insights about preferred public spaces.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"design": "Collaborative Design Patterns: Explore real-world design problems using case studies."</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Check if the selected input matches a workshop</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (input in workshops) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>result.innerHTML = "&lt;strong&gt;Recommended Workshop:&lt;/strong&gt; " + workshops[input];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>result.style.display = "block"; // Show the result area</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>result.style.display = "none"; // Hide the result area if no selection</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
