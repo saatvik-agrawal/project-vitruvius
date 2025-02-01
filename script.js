@@ -28,7 +28,8 @@ function findWorkshops() {
 
     var key = engagement + "-" + participation;
     if (!(key in workshopRecommendations)) {
-        key = "custom-1"; // Default to a general category if input is unexpected
+        alert("Invalid selection! Please choose a valid engagement level and participation scale.");
+        return;
     }
     
     var selectedWorkshops = workshopRecommendations[key];
@@ -43,13 +44,6 @@ function findWorkshops() {
     document.getElementById("workshop3").innerText = selectedWorkshops[2].replace(".html", "").replace(/-/g, " ");
 
     document.getElementById("result").style.display = "block";
+
+    console.log("Workshops selected: ", selectedWorkshops); // Debugging line to check workshop selection
 }
-
-// Ensure specialized workshop buttons work
-document.getElementById("custom1").addEventListener("click", function() {
-    window.location.href = "workshops/stakeholder-dialogue.html";
-});
-
-document.getElementById("custom2").addEventListener("click", function() {
-    window.location.href = "workshops/scenario-planning.html";
-});
