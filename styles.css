@@ -8,3 +8,8 @@ body {
 h1 {
     color: #333;
 }
+
+button {
+    font-size: 18px; /* Increases button text size */
+    padding: 10px 15px; /* Optional: Adjusts padding for better appearance */
+}
