@@ -4,51 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Participatory Design Toolkit</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #333;
-        }
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        select, button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            font-size: 16px;
-        }
-        #result {
-            margin-top: 20px;
-            padding: 10px;
-            background: #e3f2fd;
-            border-left: 5px solid #2196F3;
-            display: none;
-        }
-        .workshop-container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-        .workshop-box {
-            width: 30%;
-            background: #fff;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link CSS file -->
 </head>
 <body>
     <div class="container">
@@ -74,40 +30,13 @@
         <div id="result">
             <h2>Based on your inputs, the best 3 workshop designs for you are:</h2>
             <div class="workshop-container">
-                <div class="workshop-box" id="workshop1"></div>
-                <div class="workshop-box" id="workshop2"></div>
-                <div class="workshop-box" id="workshop3"></div>
+                <div class="workshop-box"><a id="workshop1" href="#">Workshop 1</a></div>
+                <div class="workshop-box"><a id="workshop2" href="#">Workshop 2</a></div>
+                <div class="workshop-box"><a id="workshop3" href="#">Workshop 3</a></div>
             </div>
         </div>
     </div>
-    
-    <script>
-        function findWorkshops() {
-            var engagement = document.getElementById("engagement").value;
-            var participation = document.getElementById("participation").value;
-            var result = document.getElementById("result");
-            
-            var workshopRecommendations = {
-                "low-small": ["Focus Group", "World Café", "Visual Preference Survey"],
-                "low-medium": ["Fishbowl Method", "Mapping Activity", "Mind Mapping Exercise"],
-                "low-large": ["SpeakOut Passport", "Neighborhood Drawings", "A Week with a Camera"],
-                "medium-small": ["Graph Visualization", "Issues/Opportunities Table", "Video Diary Exercise"],
-                "medium-medium": ["Collaborative Design Patterns", "Design Scenarios", "Sandbox Modeling"],
-                "medium-large": ["World Café", "Participatory Design for Housing", "Open Space Technology"],
-                "high-small": ["Modeling Workshop", "Picturization Exercise", "Mapping Activity"],
-                "high-medium": ["Community Engagement with Engineers", "Density Block Modeling", "SpeakOut Passport"],
-                "high-large": ["World Café", "Participatory Design for Housing", "Open Space Technology"]
-            };
-            
-            var key = engagement + "-" + participation;
-            var selectedWorkshops = workshopRecommendations[key] || ["Workshop Not Found", "Workshop Not Found", "Workshop Not Found"];
-            
-            document.getElementById("workshop1").innerText = selectedWorkshops[0];
-            document.getElementById("workshop2").innerText = selectedWorkshops[1];
-            document.getElementById("workshop3").innerText = selectedWorkshops[2];
-            
-            result.style.display = "block";
-        }
-    </script>
+
+    <script src="script.js"></script> <!-- Link external JavaScript file -->
 </body>
 </html>
