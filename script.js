@@ -2,35 +2,48 @@ window.onload = function() {
     console.log("Event listeners attaching...");
 
     // Attach event listeners for theme buttons
-    document.getElementById("theme-participation").addEventListener("click", function() {
-        showThemeWorkshops('participation-focused');
-    });
+    if (document.getElementById("theme-participation")) {
+        document.getElementById("theme-participation").addEventListener("click", function() {
+            showThemeWorkshops('participation-focused');
+        });
+    }
 
-    document.getElementById("theme-interactive").addEventListener("click", function() {
-        showThemeWorkshops('interactive');
-    });
+    if (document.getElementById("theme-interactive")) {
+        document.getElementById("theme-interactive").addEventListener("click", function() {
+            showThemeWorkshops('interactive');
+        });
+    }
 
-    document.getElementById("theme-hands-on").addEventListener("click", function() {
-        showThemeWorkshops('hands-on');
-    });
+    if (document.getElementById("theme-hands-on")) {
+        document.getElementById("theme-hands-on").addEventListener("click", function() {
+            showThemeWorkshops('hands-on');
+        });
+    }
 
-    document.getElementById("theme-policy").addEventListener("click", function() {
-        showThemeWorkshops('policy');
-    });
+    if (document.getElementById("theme-policy")) {
+        document.getElementById("theme-policy").addEventListener("click", function() {
+            showThemeWorkshops('policy');
+        });
+    }
 
     // Attach event listeners for specialized workshops (Custom 1 & Custom 2)
-    document.getElementById("custom1").addEventListener("click", function() {
-        console.log("Custom 1 clicked!"); // Debugging log
-        showCustomWorkshops('custom1');
-    });
+    if (document.getElementById("custom1")) {
+        document.getElementById("custom1").addEventListener("click", function() {
+            console.log("Custom 1 clicked!"); // Debugging log
+            showCustomWorkshops('custom1');
+        });
+    }
 
-    document.getElementById("custom2").addEventListener("click", function() {
-        console.log("Custom 2 clicked!"); // Debugging log
-        showCustomWorkshops('custom2');
-    });
+    if (document.getElementById("custom2")) {
+        document.getElementById("custom2").addEventListener("click", function() {
+            console.log("Custom 2 clicked!"); // Debugging log
+            showCustomWorkshops('custom2');
+        });
+    }
 
     console.log("Event listeners attached!");
 };
+
 
 
 
