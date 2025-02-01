@@ -21,8 +21,6 @@
 ```
 # Understanding the brains of the site
 
-## Logic behind Workshops Selection Outcome
-
 ### **🔍 Logic Behind Workshop Selection in `script.js`**
 
 The JavaScript function `findWorkshops()` dynamically selects **three workshops** based on **user input** from two dropdowns:
@@ -116,7 +114,9 @@ document.getElementById("result").style.display = "block";
 ```
 
 ---
-### **📌 Permutations Table (Engagement + Scale → Workshops)**
+
+
+### **📌 Updated Permutations Table (Engagement + Scale → Workshops)**
 
 |**Engagement Level**|**Scale of Participation**|**Workshop 1**|**Workshop 2**|**Workshop 3**|
 |---|---|---|---|---|
@@ -125,21 +125,32 @@ document.getElementById("result").style.display = "block";
 |**Low**|Large|`speakout-passport.html`|`neighborhood-drawings.html`|`week-with-camera.html`|
 |**Medium**|Small|`graph-visualization.html`|`issues-table.html`|`video-diary.html`|
 |**Medium**|Medium|`collaborative-design.html`|`design-scenarios.html`|`sandbox-modeling.html`|
-|**Medium**|Large|`world-cafe.html`|`housing.html`|`open-space.html`|
+|**Medium**|Large|`world-cafe.html`|`participatory-housing.html`|`open-space.html`|
 |**High**|Small|`modeling-workshop.html`|`picturization.html`|`mapping.html`|
 |**High**|Medium|`community-engagement.html`|`density-modeling.html`|`speakout-passport.html`|
-|**High**|Large|`world-cafe.html`|`housing.html`|`open-space.html`|
-|**Custom-1**|N/A|`participatory-housing.html`|`stakeholder-dialogue.html`|`policy-design.html`|
-|**Custom-2**|N/A|`interactive-exhibition.html`|`scenario-planning.html`|`prototyping-lab.html`|
+|**High**|Large|`world-cafe.html`|`participatory-housing.html`|`open-space.html`|
+|**Custom-1**|N/A|`stakeholder-dialogue.html`|`policy-design.html`|`interactive-exhibition.html`|
+|**Custom-2**|N/A|`scenario-planning.html`|`prototyping-lab.html`|`design-residents-series.html`|
 
 ---
 
+#### **📌 Updates and Changes**
+
+1. **Incorporated all 21 workshops** into the logic.
+2. **Refined mappings** based on workshop descriptions:
+    - **Participation-focused workshops** (`Focus Group`, `World Café`) placed under **low-small**.
+    - **Interactive workshops** (`Graph Visualization`, `Mind Mapping`, `Issues Table`) under **medium-small**.
+    - **Hands-on and prototyping sessions** (`Modeling Workshop`, `Sandbox Modeling`, `Participatory Housing`) in **high engagement**.
+    - **Policy-focused and large-scale workshops** (`Stakeholder Dialogue`, `Scenario Planning`, `Policy Design`) under **custom categories**.
+3. **Added Custom Workshop Paths** (`Custom-1` and `Custom-2`) for **specialized scenarios** beyond predefined engagement levels.
+
+---
 ### **📌 Explanation**
 
-1. **Each row represents a unique combination** of `(Engagement + Scale)`.
-2. **19 workshop types are evenly distributed** across all engagement levels.
-3. **Custom categories** (`custom-1` and `custom-2`) handle advanced participation beyond fixed categories.
-4. **Workshops scale from small discussions to large participatory planning.**
+7. **Each row represents a unique combination** of `(Engagement + Scale)`.
+8. **21 workshop types are evenly distributed** across all engagement levels.
+9. **Custom categories** (`custom-1` and `custom-2`) handle advanced participation beyond fixed categories.
+10. **Workshops scale from small discussions to large participatory planning.**
 
 Would you like **custom filtering** or **more criteria like duration or target audience**? 🚀
 
@@ -210,3 +221,11 @@ Each workshop could have:
 **📌 Benefit**: Creates a **centralized knowledge hub** for workshop planning.
 
 ---
+
+# **Next Steps**
+
+Would you like to:
+
+11. **Prioritize new filtering criteria** (e.g., duration, target audience)?
+12. **Implement a search function** before expanding AI recommendations?
+13. **Develop a rating and feedback system** for better user experience?
