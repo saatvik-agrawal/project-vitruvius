@@ -34,3 +34,12 @@ function findWorkshops() {
 
     document.getElementById("result").style.display = "block";
 }
+
+// Ensure specialized workshop buttons work
+document.getElementById("custom1").addEventListener("click", function() {
+    window.location.href = "workshops/stakeholder-dialogue.html";
+});
+
+document.getElementById("custom2").addEventListener("click", function() {
+    window.location.href = "workshops/scenario-planning.html";
+});
