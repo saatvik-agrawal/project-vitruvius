@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 22px;
     background-color: #f4f4f4;
 }
 
@@ -10,28 +10,28 @@ h1 {
 }
 
 button {
-    font-size: 18px; /* Increases button text size */
+    font-size: 20px; /* Increases button text size */
     padding: 10px 15px; /* Optional: Adjusts padding for better appearance */
 }
 
 select {
-    font-size: 18px; /* Increases the text size of the dropdown options */
+    font-size: 20px; /* Increases the text size of the dropdown options */
     padding: 5px; /* Adds some spacing for better visibility */
 }
 
 select option {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
 label {
-    font-size: 18px; /* Increase label text size */
+    font-size: 20px; /* Increase label text size */
     font-weight: bold; /* Optional: Makes the text bold for better visibility */
 }
 
 
 #result {
-    font-size: 20px; /* Increases text size inside the div */
+    font-size: 22px; /* Increases text size inside the div */
     padding: 20px; /* Adds spacing around the content */
     width: 100%; /* Makes it full width, adjust as needed */
 }
@@ -43,7 +43,7 @@ label {
 }
 
 .workshop-box {
-    font-size: 22px; /* Increases text size inside workshop boxes */
+    font-size: 24px; /* Increases text size inside workshop boxes */
     padding: 15px; /* Adds spacing inside each box */
     width: 200px; /* Adjust size of boxes */
     height: 100px; /* Adjust height of boxes */
