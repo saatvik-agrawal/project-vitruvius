@@ -1,3 +1,13 @@
+window.onload = function() {
+    document.getElementById("custom1").addEventListener("click", function() {
+        window.location.href = "workshops/stakeholder-dialogue.html";
+    });
+
+    document.getElementById("custom2").addEventListener("click", function() {
+        window.location.href = "workshops/scenario-planning.html";
+    });
+};
+
 function findWorkshops() {
     var engagement = document.getElementById("engagement").value;
     var participation = document.getElementById("participation").value;
