@@ -1,10 +1,10 @@
 window.onload = function() {
     document.getElementById("custom1").addEventListener("click", function() {
-        window.location.href = "workshops/stakeholder-dialogue.html";
+        showCustomWorkshops('custom1');
     });
 
     document.getElementById("custom2").addEventListener("click", function() {
-        window.location.href = "workshops/scenario-planning.html";
+        showCustomWorkshops('custom2');
     });
 };
 
@@ -47,7 +47,6 @@ function findWorkshops() {
 
     console.log("Workshops selected: ", selectedWorkshops); // Debugging line to check workshop selection
 }
-
 
 function showCustomWorkshops(customType) {
     var customWorkshops = {
