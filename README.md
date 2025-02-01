@@ -113,12 +113,4 @@ Each workshop could have:
 
 **📌 Benefit**: Creates a **centralized knowledge hub** for workshop planning.
 
----
-
-# **Next Steps**
-
-Would you like to:
-
-11. **Prioritize new filtering criteria** (e.g., duration, target audience)?
-12. **Implement a search function** before expanding AI recommendations?
-13. **Develop a rating and feedback system** for better user experience?
+-
