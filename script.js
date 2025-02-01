@@ -1,12 +1,43 @@
 window.onload = function() {
-    document.getElementById("custom1").addEventListener("click", function() {
-        showCustomWorkshops('custom1');
+    document.getElementById("theme-participation").addEventListener("click", function() {
+        showThemeWorkshops('participation-focused');
     });
 
-    document.getElementById("custom2").addEventListener("click", function() {
-        showCustomWorkshops('custom2');
+    document.getElementById("theme-interactive").addEventListener("click", function() {
+        showThemeWorkshops('interactive');
+    });
+
+    document.getElementById("theme-hands-on").addEventListener("click", function() {
+        showThemeWorkshops('hands-on');
+    });
+
+    document.getElementById("theme-policy").addEventListener("click", function() {
+        showThemeWorkshops('policy');
     });
 };
+
+function showThemeWorkshops(theme) {
+    var themeWorkshops = {
+        "participation-focused": ["focus-group.html", "world-cafe.html", "visual-preference-survey.html"],
+        "interactive": ["fishbowl-method.html", "mapping-activity.html", "mind-mapping-exercise.html"],
+        "hands-on": ["sandbox-modeling.html", "design-scenarios-workshop.html", "collaborative-design-patterns.html"],
+        "policy": ["stakeholder-dialogue.html", "policy-design.html", "interactive-exhibition.html"]
+    };
+
+    var selectedWorkshops = themeWorkshops[theme];
+
+    document.getElementById("theme1").href = "workshops/" + selectedWorkshops[0];
+    document.getElementById("theme1").innerText = selectedWorkshops[0].replace(".html", "").replace(/-/g, " ");
+
+    document.getElementById("theme2").href = "workshops/" + selectedWorkshops[1];
+    document.getElementById("theme2").innerText = selectedWorkshops[1].replace(".html", "").replace(/-/g, " ");
+
+    document.getElementById("theme3").href = "workshops/" + selectedWorkshops[2];
+    document.getElementById("theme3").innerText = selectedWorkshops[2].replace(".html", "").replace(/-/g, " ");
+
+    document.getElementById("theme-result").style.display = "block";
+}
+
 
 function findWorkshops() {
     var engagement = document.getElementById("engagement").value;
@@ -66,27 +97,4 @@ function showCustomWorkshops(customType) {
     document.getElementById("customWorkshop3").innerText = selectedWorkshops[2].replace(".html", "").replace(/-/g, " ");
 
     document.getElementById("custom-result").style.display = "block";
-}
-
-
-function showThemeWorkshops(theme) {
-    var themeWorkshops = {
-        "participation-focused": ["focus-group.html", "world-cafe.html", "visual-preference-survey.html"],
-        "interactive": ["fishbowl-method.html", "mapping-activity.html", "mind-mapping-exercise.html"],
-        "hands-on": ["sandbox-modeling.html", "design-scenarios-workshop.html", "collaborative-design-patterns.html"],
-        "policy": ["stakeholder-dialogue.html", "policy-design.html", "interactive-exhibition.html"]
-    };
-
-    var selectedWorkshops = themeWorkshops[theme];
-
-    document.getElementById("theme1").href = "workshops/" + selectedWorkshops[0];
-    document.getElementById("theme1").innerText = selectedWorkshops[0].replace(".html", "").replace(/-/g, " ");
-
-    document.getElementById("theme2").href = "workshops/" + selectedWorkshops[1];
-    document.getElementById("theme2").innerText = selectedWorkshops[1].replace(".html", "").replace(/-/g, " ");
-
-    document.getElementById("theme3").href = "workshops/" + selectedWorkshops[2];
-    document.getElementById("theme3").innerText = selectedWorkshops[2].replace(".html", "").replace(/-/g, " ");
-
-    document.getElementById("theme-result").style.display = "block";
 }
