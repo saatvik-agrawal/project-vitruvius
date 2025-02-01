@@ -1,4 +1,7 @@
 window.onload = function() {
+    console.log("Script loaded, adding event listeners..."); // Debugging log
+
+    // Attach event listeners for theme buttons
     document.getElementById("theme-participation").addEventListener("click", function() {
         showThemeWorkshops('participation-focused');
     });
@@ -14,7 +17,19 @@ window.onload = function() {
     document.getElementById("theme-policy").addEventListener("click", function() {
         showThemeWorkshops('policy');
     });
+
+    // Attach event listeners for specialized workshops
+    document.getElementById("custom1").addEventListener("click", function() {
+        showCustomWorkshops('custom1');
+    });
+
+    document.getElementById("custom2").addEventListener("click", function() {
+        showCustomWorkshops('custom2');
+    });
+
+    console.log("Event listeners attached!"); // Debugging log
 };
+
 
 function showThemeWorkshops(theme) {
     var themeWorkshops = {
