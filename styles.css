@@ -22,3 +22,9 @@ select {
 select option {
     font-size: 18px;
 }
+
+
+label {
+    font-size: 18px; /* Increase label text size */
+    font-weight: bold; /* Optional: Makes the text bold for better visibility */
+}
