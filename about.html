@@ -3,27 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Vitruvius - Read Me</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Project Vitruvius</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            max-width: 800px;
+        }
+        h2, h3, h4 {
+            color: #333;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #f4f4f4;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Project Vitruvius - Read Me</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="introduction">
-        <h2>Introduction</h2>
-        <p>Welcome to Project Vitruvius, an initiative designed to structure and organize participatory workshops.</p>
-    </section>
-    
-    <section id="file-structure">
-        <h2>File Management Structure</h2>
-        <pre>
+
+    <h2>Website Address</h2>
+    <h4><a href="https://saatvik-agrawal.github.io/project-vitruvius/" target="_blank">https://saatvik-agrawal.github.io/project-vitruvius/</a></h4>
+
+    <h2>File Management Structure</h2>
+    <pre>
 /project-vitruvius
 │── index.html                 # Main homepage
 │── styles.css                 # Global styles
@@ -32,43 +55,141 @@
 │   │── focus-group.html         # Workshop 1
 │   │── world-cafe.html          # Workshop 2
 │   │── open-space.html          # Workshop 3
+│   │── ... (other workshops)
 │── assets/
 │   │── images/                  # Store images
 │   │── pdfs/                    # Store downloadable guides
-        </pre>
-    </section>
-    
-    <section id="permutations">
-        <h2>Permutations Table (Engagement + Scale → Workshops)</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Engagement Level</th>
-                    <th>Scale of Participation</th>
-                    <th>Workshop 1</th>
-                    <th>Workshop 2</th>
-                    <th>Workshop 3</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Low</td><td>Small</td><td>Focus Group</td><td>World Cafe</td><td>Visual Survey</td></tr>
-                <tr><td>Low</td><td>Medium</td><td>Fishbowl</td><td>Mapping</td><td>Mind Mapping</td></tr>
-                <tr><td>Low</td><td>Large</td><td>Speakout Passport</td><td>Neighborhood Drawings</td><td>Week with Camera</td></tr>
-                <tr><td>Medium</td><td>Small</td><td>Graph Visualization</td><td>Issues Table</td><td>Video Diary</td></tr>
-                <tr><td>High</td><td>Large</td><td>World Cafe</td><td>Participatory Housing</td><td>Open Space</td></tr>
-            </tbody>
-        </table>
-    </section>
-    
-    <section id="future-plans">
-        <h2>Future Plans</h2>
-        <ul>
-            <li>Expand selection criteria (Duration, Audience, Format)</li>
-            <li>Implement advanced search and filtering</li>
-            <li>Introduce AI-powered workshop suggestions</li>
-            <li>Create multi-page detailed workshop descriptions</li>
-        </ul>
-    </section>
-    
+    </pre>
+
+    <h1>Understanding the Brains of the Site</h1>
+
+    <h2>📌 Permutations Table (Engagement + Scale → Workshops)</h2>
+
+    <table>
+        <tr>
+            <th>Engagement Level</th>
+            <th>Scale of Participation</th>
+            <th>Workshop 1</th>
+            <th>Workshop 2</th>
+            <th>Workshop 3</th>
+        </tr>
+        <tr>
+            <td><strong>Low</strong></td>
+            <td>Small</td>
+            <td>focus-group.html</td>
+            <td>world-cafe.html</td>
+            <td>visual-survey.html</td>
+        </tr>
+        <tr>
+            <td><strong>Low</strong></td>
+            <td>Medium</td>
+            <td>fishbowl.html</td>
+            <td>mapping.html</td>
+            <td>mind-mapping.html</td>
+        </tr>
+        <tr>
+            <td><strong>Low</strong></td>
+            <td>Large</td>
+            <td>speakout-passport.html</td>
+            <td>neighborhood-drawings.html</td>
+            <td>week-with-camera.html</td>
+        </tr>
+        <tr>
+            <td><strong>Medium</strong></td>
+            <td>Small</td>
+            <td>graph-visualization.html</td>
+            <td>issues-table.html</td>
+            <td>video-diary.html</td>
+        </tr>
+        <tr>
+            <td><strong>Medium</strong></td>
+            <td>Medium</td>
+            <td>collaborative-design.html</td>
+            <td>design-scenarios.html</td>
+            <td>sandbox-modeling.html</td>
+        </tr>
+        <tr>
+            <td><strong>Medium</strong></td>
+            <td>Large</td>
+            <td>world-cafe.html</td>
+            <td>participatory-housing.html</td>
+            <td>open-space.html</td>
+        </tr>
+        <tr>
+            <td><strong>High</strong></td>
+            <td>Small</td>
+            <td>modeling-workshop.html</td>
+            <td>picturization.html</td>
+            <td>mapping.html</td>
+        </tr>
+        <tr>
+            <td><strong>High</strong></td>
+            <td>Medium</td>
+            <td>community-engagement.html</td>
+            <td>density-modeling.html</td>
+            <td>speakout-passport.html</td>
+        </tr>
+        <tr>
+            <td><strong>High</strong></td>
+            <td>Large</td>
+            <td>world-cafe.html</td>
+            <td>participatory-housing.html</td>
+            <td>open-space.html</td>
+        </tr>
+        <tr>
+            <td><strong>Custom-1</strong></td>
+            <td>N/A</td>
+            <td>stakeholder-dialogue.html</td>
+            <td>policy-design.html</td>
+            <td>interactive-exhibition.html</td>
+        </tr>
+        <tr>
+            <td><strong>Custom-2</strong></td>
+            <td>N/A</td>
+            <td>scenario-planning.html</td>
+            <td>prototyping-lab.html</td>
+            <td>design-residents-series.html</td>
+        </tr>
+    </table>
+
+    <h3>📌 Explanation</h3>
+    <ul>
+        <li><strong>Each row represents a unique combination</strong> of (Engagement + Scale).</li>
+        <li><strong>21 workshop types are evenly distributed</strong> across all engagement levels.</li>
+        <li><strong>Custom categories</strong> (Custom-1 and Custom-2) handle advanced participation beyond fixed categories.</li>
+        <li><strong>Workshops scale</strong> from small discussions to large participatory planning.</li>
+    </ul>
+    <p>Would you like <strong>custom filtering</strong> or <strong>more criteria like duration or target audience?</strong> 🚀</p>
+
+    <h3>🎯 Why This Logic is Effective</h3>
+    <ul>
+        <li>✅ <strong>Flexible & Scalable</strong> – Can easily add more workshops.</li>
+        <li>✅ <strong>User-Friendly</strong> – Auto-generates clickable links with formatted names.</li>
+        <li>✅ <strong>Efficient Selection</strong> – Uses a structured mapping system to match workshops.</li>
+    </ul>
+
+    <h1>Future Plans</h1>
+
+    <h2>Future Plans Brief for Participatory Design Toolkit</h2>
+
+    <h3>Overview</h3>
+    <p>The Participatory Design Toolkit currently recommends workshop templates based on <strong>level of engagement</strong> and <strong>scale of participation</strong>. Future enhancements aim to make it more flexible and user-centric.</p>
+
+    <h3>Proposed Enhancements</h3>
+    <ul>
+        <li><strong>1️⃣ Expand Selection Criteria</strong> – Add filtering options like duration, audience type, and format.</li>
+        <li><strong>2️⃣ Advanced Search & Filtering</strong> – Enable keyword-based searches and dynamic filtering.</li>
+        <li><strong>3️⃣ AI-Powered Workshop Suggestions</strong> – Use AI to analyze user behavior for better recommendations.</li>
+        <li><strong>4️⃣ Multi-Page Workshop Descriptions</strong> – Detailed workshop pages with resources and guides.</li>
+    </ul>
+
+    <h3>Next Steps</h3>
+    <p>Would you like to:</p>
+    <ol>
+        <li>Prioritize new filtering criteria?</li>
+        <li>Implement a search function before AI recommendations?</li>
+        <li>Develop a rating and feedback system?</li>
+    </ol>
+
 </body>
 </html>
