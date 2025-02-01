@@ -43,29 +43,3 @@ document.getElementById("custom1").addEventListener("click", function() {
 document.getElementById("custom2").addEventListener("click", function() {
     window.location.href = "workshops/scenario-planning.html";
 });
-
-
-function redirectToCustomWorkshop(customType) {
-    var customWorkshops = {
-        "custom-1": "workshops/stakeholder-dialogue.html",
-        "custom-2": "workshops/scenario-planning.html"
-    };
-
-    if (customType in customWorkshops) {
-        window.location.href = customWorkshops[customType];
-    }
-}
-
-function redirectToThemeWorkshop(theme) {
-    var themeWorkshops = {
-        "participation-focused": "workshops/participation-focused.html",
-        "interactive": "workshops/interactive.html",
-        "hands-on": "workshops/hands-on.html",
-        "policy": "workshops/policy.html"
-    };
-
-    if (theme in themeWorkshops) {
-        window.location.href = themeWorkshops[theme];
-    }
-}
-
