@@ -21,102 +21,7 @@
 ```
 # Understanding the brains of the site
 
-### **🔍 Logic Behind Workshop Selection in `script.js`**
-
-The JavaScript function `findWorkshops()` dynamically selects **three workshops** based on **user input** from two dropdowns:
-
-1. **Level of Engagement** (`low`, `medium`, `high`) – Defines how much effort or interaction the workshop requires.
-2. **Scale of Participation** (`small`, `medium`, `large`) – Determines the number of participants or the size of engagement.
-
----
-
-### **📌 Step-by-Step Breakdown**
-
-#### **1️⃣ Capture User Input**
-
-The function gets values from two dropdown menus:
-
-```js
-var engagement = document.getElementById("engagement").value;
-var participation = document.getElementById("participation").value;
-```
-
-These values are combined into a **unique key** (e.g., `"medium-large"`).
-
----
-
-#### **2️⃣ Define Workshop Selection Logic**
-
-A **dictionary (`workshopRecommendations`)** maps each possible combination to **three workshop recommendations**:
-
-```js
-var workshopRecommendations = {
-    "low-small": ["focus-group.html", "world-cafe.html", "visual-survey.html"],
-    "low-medium": ["fishbowl.html", "mapping.html", "mind-mapping.html"],
-    "low-large": ["speakout-passport.html", "neighborhood-drawings.html", "week-with-camera.html"],
-    "medium-small": ["graph-visualization.html", "issues-table.html", "video-diary.html"],
-    "medium-medium": ["collaborative-design.html", "design-scenarios.html", "sandbox-modeling.html"],
-    "medium-large": ["world-cafe.html", "housing.html", "open-space.html"],
-    "high-small": ["modeling-workshop.html", "picturization.html", "mapping.html"],
-    "high-medium": ["community-engagement.html", "density-modeling.html", "speakout-passport.html"],
-    "high-large": ["world-cafe.html", "housing.html", "open-space.html"],
-    "custom-1": ["participatory-housing.html", "stakeholder-dialogue.html", "policy-design.html"],
-    "custom-2": ["interactive-exhibition.html", "scenario-planning.html", "prototyping-lab.html"]
-};
-```
-
-- **Each key (`"engagement-participation"`)** corresponds to an **array of 3 workshop pages**.
-- If the key doesn’t match, a **fallback ("not-found.html")** is used.
-
----
-
-#### **3️⃣ Select Workshops Based on User Input**
-
-Using the combined key, the function retrieves **the best 3 matching workshops**:
-
-```js
-var key = engagement + "-" + participation;
-var selectedWorkshops = workshopRecommendations[key] || ["not-found.html", "not-found.html", "not-found.html"];
-```
-
-If **no valid match** is found, it assigns `"not-found.html"` as a fallback.
-
----
-
-#### **4️⃣ Dynamically Update HTML**
-
-The function updates the **three workshop links** dynamically:
-
-```js
-document.getElementById("workshop1").href = "workshops/" + selectedWorkshops[0];
-document.getElementById("workshop1").innerText = selectedWorkshops[0].replace(".html", "").replace("-", " ");
-
-document.getElementById("workshop2").href = "workshops/" + selectedWorkshops[1];
-document.getElementById("workshop2").innerText = selectedWorkshops[1].replace(".html", "").replace("-", " ");
-
-document.getElementById("workshop3").href = "workshops/" + selectedWorkshops[2];
-document.getElementById("workshop3").innerText = selectedWorkshops[2].replace(".html", "").replace("-", " ");
-```
-
-This:
-
-- **Assigns the correct href link** (so users can click and navigate).
-- **Formats the workshop title** (removing `.html` and replacing `-` with spaces).
-
----
-
-#### **5️⃣ Display the Results**
-
-Finally, the function makes the result section **visible**:
-
-```js
-document.getElementById("result").style.display = "block";
-```
-
----
-
-
-### **📌 Updated Permutations Table (Engagement + Scale → Workshops)**
+## **📌  Permutations Table (Engagement + Scale → Workshops)**
 
 |**Engagement Level**|**Scale of Participation**|**Workshop 1**|**Workshop 2**|**Workshop 3**|
 |---|---|---|---|---|
@@ -131,18 +36,6 @@ document.getElementById("result").style.display = "block";
 |**High**|Large|`world-cafe.html`|`participatory-housing.html`|`open-space.html`|
 |**Custom-1**|N/A|`stakeholder-dialogue.html`|`policy-design.html`|`interactive-exhibition.html`|
 |**Custom-2**|N/A|`scenario-planning.html`|`prototyping-lab.html`|`design-residents-series.html`|
-
----
-
-#### **📌 Updates and Changes**
-
-1. **Incorporated all 21 workshops** into the logic.
-2. **Refined mappings** based on workshop descriptions:
-    - **Participation-focused workshops** (`Focus Group`, `World Café`) placed under **low-small**.
-    - **Interactive workshops** (`Graph Visualization`, `Mind Mapping`, `Issues Table`) under **medium-small**.
-    - **Hands-on and prototyping sessions** (`Modeling Workshop`, `Sandbox Modeling`, `Participatory Housing`) in **high engagement**.
-    - **Policy-focused and large-scale workshops** (`Stakeholder Dialogue`, `Scenario Planning`, `Policy Design`) under **custom categories**.
-3. **Added Custom Workshop Paths** (`Custom-1` and `Custom-2`) for **specialized scenarios** beyond predefined engagement levels.
 
 ---
 ### **📌 Explanation**
