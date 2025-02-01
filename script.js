@@ -45,7 +45,7 @@ function findWorkshops() {
 
     document.getElementById("result").style.display = "block";
 
-    console.log("Workshops selected: ", selectedWorkshops); // Debugging line to check workshop selection
+    console.log("Workshops selected: ", selectedWorkshops);
 }
 
 function showCustomWorkshops(customType) {
@@ -55,6 +55,7 @@ function showCustomWorkshops(customType) {
     };
 
     var selectedWorkshops = customWorkshops[customType];
+
     document.getElementById("customWorkshop1").href = "workshops/" + selectedWorkshops[0];
     document.getElementById("customWorkshop1").innerText = selectedWorkshops[0].replace(".html", "").replace(/-/g, " ");
 
