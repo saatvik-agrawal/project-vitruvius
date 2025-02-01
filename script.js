@@ -47,3 +47,23 @@ function findWorkshops() {
 
     console.log("Workshops selected: ", selectedWorkshops); // Debugging line to check workshop selection
 }
+
+
+function showCustomWorkshops(customType) {
+    var customWorkshops = {
+        "custom1": ["stakeholder-dialogue.html", "policy-design.html", "interactive-exhibition.html"],
+        "custom2": ["scenario-planning.html", "prototyping-lab.html", "design-residents-series.html"]
+    };
+
+    var selectedWorkshops = customWorkshops[customType];
+    document.getElementById("customWorkshop1").href = "workshops/" + selectedWorkshops[0];
+    document.getElementById("customWorkshop1").innerText = selectedWorkshops[0].replace(".html", "").replace(/-/g, " ");
+
+    document.getElementById("customWorkshop2").href = "workshops/" + selectedWorkshops[1];
+    document.getElementById("customWorkshop2").innerText = selectedWorkshops[1].replace(".html", "").replace(/-/g, " ");
+
+    document.getElementById("customWorkshop3").href = "workshops/" + selectedWorkshops[2];
+    document.getElementById("customWorkshop3").innerText = selectedWorkshops[2].replace(".html", "").replace(/-/g, " ");
+
+    document.getElementById("custom-result").style.display = "block";
+}
