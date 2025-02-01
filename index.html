@@ -28,8 +28,8 @@
         <button onclick="findWorkshops()">Find Workshops</button>
         
         <h2>Looking for specialized workshops?</h2>
-        <button onclick="loadCustomWorkshops('custom-1')">Custom 1: Stakeholder & Policy</button>
-        <button onclick="loadCustomWorkshops('custom-2')">Custom 2: Scenario Planning & Prototyping</button>
+        <button onclick="redirectToCustomWorkshop('custom-1')">Custom 1: Stakeholder & Policy</button>
+        <button onclick="redirectToCustomWorkshop('custom-2')">Custom 2: Scenario Planning & Prototyping</button>
         
         <div id="result">
             <h2>Based on your inputs, the best 3 workshop designs for you are:</h2>
@@ -42,10 +42,10 @@
 
         <h2>Explore Workshops by Theme</h2>
         <div class="theme-container">
-            <button onclick="loadThemeWorkshops('participation-focused')">Participation-focused Workshops</button>
-            <button onclick="loadThemeWorkshops('interactive')">Interactive Workshops</button>
-            <button onclick="loadThemeWorkshops('hands-on')">Hands-on & Prototyping</button>
-            <button onclick="loadThemeWorkshops('policy')">Policy-focused & Large-scale</button>
+            <button onclick="redirectToThemeWorkshop('participation-focused')">Participation-focused Workshops</button>
+            <button onclick="redirectToThemeWorkshop('interactive')">Interactive Workshops</button>
+            <button onclick="redirectToThemeWorkshop('hands-on')">Hands-on & Prototyping</button>
+            <button onclick="redirectToThemeWorkshop('policy')">Policy-focused & Large-scale</button>
         </div>
 
         <div id="theme-result" style="display:none;">
