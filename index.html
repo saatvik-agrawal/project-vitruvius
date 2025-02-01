@@ -51,10 +51,10 @@
 
         <h2>Explore Workshops by Theme</h2>
         <div class="theme-container">
-            <button onclick="redirectToThemeWorkshop('participation-focused')">Participation-focused Workshops</button>
-            <button onclick="redirectToThemeWorkshop('interactive')">Interactive Workshops</button>
-            <button onclick="redirectToThemeWorkshop('hands-on')">Hands-on & Prototyping</button>
-            <button onclick="redirectToThemeWorkshop('policy')">Policy-focused & Large-scale</button>
+            <button id="theme-participation" onclick="showThemeWorkshops('participation-focused')">Participation-focused Workshops</button>
+            <button id="theme-interactive" onclick="showThemeWorkshops('interactive')">Interactive Workshops</button>
+            <button id="theme-hands-on" onclick="showThemeWorkshops('hands-on')">Hands-on & Prototyping</button>
+            <button id="theme-policy" onclick="showThemeWorkshops('policy')">Policy-focused & Large-scale</button>
         </div>
 
         <div id="theme-result" style="display:none;">
