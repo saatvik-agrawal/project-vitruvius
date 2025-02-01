@@ -1,4 +1,6 @@
 ## File Management Structure
+
+```
 /project-vitruvius
 │── index.html                 # Main homepage
 │── styles.css                 # Global styles
@@ -11,3 +13,5 @@
 │── assets/
 │   │── images/                  # Store images
 │   │── pdfs/                    # Store downloadable guides
+
+```
