@@ -45,8 +45,6 @@
 - **Custom categories** (`custom-1` and `custom-2`) handle advanced participation beyond fixed categories.
 - **Workshops scale from small discussions to large participatory planning.
 
-Would you like **custom filtering** or **more criteria like duration or target audience**? 🚀
-
 ---
 
 ### **🎯 Why This Logic is Effective**
