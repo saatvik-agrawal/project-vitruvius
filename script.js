@@ -98,6 +98,8 @@ function findWorkshops() {
 }
 
 function showCustomWorkshops(customType) {
+    console.log("showCustomWorkshops called with:", customType); // Debugging log
+
     var customWorkshops = {
         "custom1": ["stakeholder-dialogue.html", "policy-design.html", "interactive-exhibition.html"],
         "custom2": ["scenario-planning.html", "prototyping-lab.html", "design-residents-series.html"]
@@ -115,4 +117,6 @@ function showCustomWorkshops(customType) {
     document.getElementById("customWorkshop3").innerText = selectedWorkshops[2].replace(".html", "").replace(/-/g, " ");
 
     document.getElementById("custom-result").style.display = "block";
+
+    console.log("Workshops displayed for:", customType);
 }
