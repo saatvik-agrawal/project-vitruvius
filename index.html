@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Participatory Design Toolkit</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link CSS file -->
-<link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <div class="container">
@@ -28,12 +27,33 @@
         
         <button onclick="findWorkshops()">Find Workshops</button>
         
+        <h2>Looking for specialized workshops?</h2>
+        <button onclick="loadCustomWorkshops('custom-1')">Custom 1: Stakeholder & Policy</button>
+        <button onclick="loadCustomWorkshops('custom-2')">Custom 2: Scenario Planning & Prototyping</button>
+        
         <div id="result">
             <h2>Based on your inputs, the best 3 workshop designs for you are:</h2>
             <div class="workshop-container">
                 <div class="workshop-box"><a id="workshop1" href="#">Workshop 1</a></div>
                 <div class="workshop-box"><a id="workshop2" href="#">Workshop 2</a></div>
                 <div class="workshop-box"><a id="workshop3" href="#">Workshop 3</a></div>
+            </div>
+        </div>
+
+        <h2>Explore Workshops by Theme</h2>
+        <div class="theme-container">
+            <button onclick="loadThemeWorkshops('participation-focused')">Participation-focused Workshops</button>
+            <button onclick="loadThemeWorkshops('interactive')">Interactive Workshops</button>
+            <button onclick="loadThemeWorkshops('hands-on')">Hands-on & Prototyping</button>
+            <button onclick="loadThemeWorkshops('policy')">Policy-focused & Large-scale</button>
+        </div>
+
+        <div id="theme-result" style="display:none;">
+            <h2>Workshops under this theme:</h2>
+            <div class="workshop-container">
+                <div class="workshop-box"><a id="theme1" href="#">Workshop 1</a></div>
+                <div class="workshop-box"><a id="theme2" href="#">Workshop 2</a></div>
+                <div class="workshop-box"><a id="theme3" href="#">Workshop 3</a></div>
             </div>
         </div>
     </div>
