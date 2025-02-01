@@ -118,6 +118,11 @@ function showCustomWorkshops(customType) {
         "custom2": ["scenario-planning.html", "prototyping-lab.html", "design-residents-series.html"]
     };
 
+    if (!(customType in customWorkshops)) {
+        console.log("Invalid customType:", customType);
+        return;
+    }
+
     var selectedWorkshops = customWorkshops[customType];
 
     document.getElementById("customWorkshop1").href = "workshops/" + selectedWorkshops[0];
@@ -133,3 +138,4 @@ function showCustomWorkshops(customType) {
 
     console.log("Workshops displayed for:", customType);
 }
+
