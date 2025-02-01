@@ -19,7 +19,7 @@
 │   │── pdfs/                    # Store downloadable guides
 
 ```
-# Understanding the brains: Logic behind Workshops Selection Outcome
+## Understanding the brains: Logic behind Workshops Selection Outcome
 
 ### **🔍 Logic Behind Workshop Selection in `script.js`**
 
