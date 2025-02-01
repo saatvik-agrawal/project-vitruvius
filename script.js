@@ -17,7 +17,11 @@ function findWorkshops() {
     };
 
     var key = engagement + "-" + participation;
-    var selectedWorkshops = workshopRecommendations[key] || ["not-found.html", "not-found.html", "not-found.html"];
+    if (!(key in workshopRecommendations)) {
+        key = "custom-1"; // Default to a general category if input is unexpected
+    }
+    
+    var selectedWorkshops = workshopRecommendations[key];
 
     document.getElementById("workshop1").href = "workshops/" + selectedWorkshops[0];
     document.getElementById("workshop1").innerText = selectedWorkshops[0].replace(".html", "").replace("-", " ");
