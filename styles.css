@@ -13,3 +13,12 @@ button {
     font-size: 18px; /* Increases button text size */
     padding: 10px 15px; /* Optional: Adjusts padding for better appearance */
 }
+
+select {
+    font-size: 18px; /* Increases the text size of the dropdown options */
+    padding: 5px; /* Adds some spacing for better visibility */
+}
+
+select option {
+    font-size: 18px;
+}
