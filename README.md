@@ -40,10 +40,10 @@
 ---
 ### **📌 Explanation**
 
-7. **Each row represents a unique combination** of `(Engagement + Scale)`.
-8. **21 workshop types are evenly distributed** across all engagement levels.
-9. **Custom categories** (`custom-1` and `custom-2`) handle advanced participation beyond fixed categories.
-10. **Workshops scale from small discussions to large participatory planning.**
+- **Each row represents a unique combination** of `(Engagement + Scale)`.
+- **21 workshop types are evenly distributed** across all engagement levels.
+- **Custom categories** (`custom-1` and `custom-2`) handle advanced participation beyond fixed categories.
+- **Workshops scale from small discussions to large participatory planning.
 
 Would you like **custom filtering** or **more criteria like duration or target audience**? 🚀
 
