@@ -8,12 +8,12 @@ function findWorkshops() {
         "low-large": ["speakout-passport.html", "neighborhood-drawings.html", "week-with-camera.html"],
         "medium-small": ["graph-visualization.html", "issues-table.html", "video-diary.html"],
         "medium-medium": ["collaborative-design.html", "design-scenarios.html", "sandbox-modeling.html"],
-        "medium-large": ["world-cafe.html", "housing.html", "open-space.html"],
+        "medium-large": ["world-cafe.html", "participatory-housing.html", "open-space.html"],
         "high-small": ["modeling-workshop.html", "picturization.html", "mapping.html"],
         "high-medium": ["community-engagement.html", "density-modeling.html", "speakout-passport.html"],
-        "high-large": ["world-cafe.html", "housing.html", "open-space.html"],
-        "custom-1": ["participatory-housing.html", "stakeholder-dialogue.html", "policy-design.html"],
-        "custom-2": ["interactive-exhibition.html", "scenario-planning.html", "prototyping-lab.html"]
+        "high-large": ["world-cafe.html", "participatory-housing.html", "open-space.html"],
+        "custom-1": ["stakeholder-dialogue.html", "policy-design.html", "interactive-exhibition.html"],
+        "custom-2": ["scenario-planning.html", "prototyping-lab.html", "design-residents-series.html"]
     };
 
     var key = engagement + "-" + participation;
